@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      form {
+        margin-bottom: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="theForm">
+      <label>
+        <input type="checkbox" name="option" value="Internship" />
+        Internship
+      </label>
+      <label>
+        <input type="checkbox" name="option" value="Pabau" />
+        Pabau
+      </label>
+      <label>
+        <input type="checkbox" name="option" value="Employment" />
+        Employment
+      </label>
+      <label>
+        <input type="checkbox" name="option" value="Career" />
+        Career
+      </label>
+    </form>
+    <div>
+      <button type="button" onclick="reverseInputs()">Shuffle Values</button>
+      <button type="button" id="changeValue">Change Values</button>
+      <button type="button" id="selectValue">Show selected values</button>
+    </div>
+    <p id="showSelected"></p>
+  </body>
+  <script src="index.js"></script>
+</html>
