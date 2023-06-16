@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import pabauLogo from "./assets/pabaulogo.svg";
 import imageItem from "./assets/ImageItem.svg";
 import "./App.css";
+import ItemDetails from "./components/ItemDetails";
 
 const App = () => {
   const [isSelected, setIsSelected] = useState(null);
@@ -63,23 +64,8 @@ const App = () => {
           </div>
         </main>
       )}
-      {currentStep === 2 && isSelected && (
-        <main style={{ height: "100vh" }}>
-          <div className="item__detail">
-            <h2>{isSelected.name} Details</h2>
-            <p>Name:</p>
-            <span>{isSelected.name}</span>
-            <p>Details:</p>
-            <span>{isSelected.description}</span>
-            <button type="button" onClick={handleBackButton}>
-              Back
-            </button>
-          </div>
-          <div className="bottom__info">
-            <p>Not sure about consultation type? Please call</p>
-            <span>0203 7959063</span>
-          </div>
-        </main>
+      {currentStep === 2 && (
+        <ItemDetails item={isSelected} handleBackButton={handleBackButton} />
       )}
       <footer>
         <p>Powered By</p>
